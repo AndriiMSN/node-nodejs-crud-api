@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-crud-api",
+  "version": "1.0.0",
+  "description": "rs-node-crud-api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndriiMSN/node-nodejs-crud-api.git"
+  },
+  "author": "Andrii Mosin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndriiMSN/node-nodejs-crud-api/issues"
+  },
+  "homepage": "https://github.com/AndriiMSN/node-nodejs-crud-api#readme"
+}
