@@ -1,10 +1,14 @@
 {
   "name": "nodejs-crud-api",
   "version": "1.0.0",
-  "description": "rs-node-crud-api",
-  "main": "index.js",
+  "description": "CRUD API for Product Catalog using Fastify + TypeScript",
+  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:dev": "tsx watch src/index.ts",
+    "start:prod": "npm run build && node dist/index.js",
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --packages=external",
+    "test": "node --test src/__tests__/api.test.ts"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/AndriiMSN/node-nodejs-crud-api/issues"
   },
-  "homepage": "https://github.com/AndriiMSN/node-nodejs-crud-api#readme"
+  "homepage": "https://github.com/AndriiMSN/node-nodejs-crud-api#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fastify": "^5.2.1",
+    "uuid": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/uuid": "^10.0.0",
+    "esbuild": "^0.24.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
 }
